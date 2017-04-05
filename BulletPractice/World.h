@@ -1,6 +1,7 @@
 #pragma once
 #include "Texture.h"
 #include "DirectionalEnemy.h"
+#include "SpiralEnemy.h"
 #include "Bullet.h"
 #include <D3D11.h>
 #include <xnamath.h>
@@ -19,4 +20,5 @@ public:
 private:
 	Texture* m_EnemyTexture;
 	DirectionalEnemy* m_DirectionalEnemy;
+	SpiralEnemy* m_SpiralEnemy;
 };
