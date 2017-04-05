@@ -18,4 +18,7 @@ public:
 private:
 	Texture* m_BulletTexture;
 	Bullet* m_Bullet;
+	Bullet* m_Bullet2;
+	Bullet* m_Bullet3;
+	Bullet* m_Bullet4;
 };

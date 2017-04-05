@@ -3,7 +3,7 @@
 #include <xnamath.h>
 
 Bullet::Bullet(ID3D11Device* device, Texture* texture, XMFLOAT2 position, float angle, float angle_rate, float speed, float speed_rate) :
-	GameObject(device, texture, 16, 16), m_Speed(speed), m_Speed_rate(speed_rate), m_Angle(angle), m_Angle_rate(angle_rate)
+	GameObject(device, texture, 16, 16), m_Angle(angle), m_Angle_rate(angle_rate), m_Speed(speed), m_Speed_rate(speed_rate)
 {
 	setPosition(position.x, position.y);
 }
