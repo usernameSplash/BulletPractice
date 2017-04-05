@@ -96,6 +96,9 @@
     <ClInclude Include="SpiralEnemy.h">
       <Filter>헤더 파일\Game\Enemy</Filter>
     </ClInclude>
+    <ClInclude Include="MultipleSpiralEnemy.h">
+      <Filter>헤더 파일\Game\Enemy</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -144,6 +147,9 @@
       <Filter>소스 파일\Game\Enemy</Filter>
     </ClCompile>
     <ClCompile Include="SpiralEnemy.cpp">
+      <Filter>소스 파일\Game\Enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="MultipleSpiralEnemy.cpp">
       <Filter>소스 파일\Game\Enemy</Filter>
     </ClCompile>
   </ItemGroup>

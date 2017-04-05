@@ -166,6 +166,7 @@
     <ClInclude Include="GameTimer.h" />
     <ClInclude Include="GameWindow.h" />
     <ClInclude Include="Input.h" />
+    <ClInclude Include="MultipleSpiralEnemy.h" />
     <ClInclude Include="Shader.h" />
     <ClInclude Include="SpiralEnemy.h" />
     <ClInclude Include="Texture.h" />
@@ -184,6 +185,7 @@
     <ClCompile Include="GameWindow.cpp" />
     <ClCompile Include="Input.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="MultipleSpiralEnemy.cpp" />
     <ClCompile Include="Shader.cpp" />
     <ClCompile Include="SpiralEnemy.cpp" />
     <ClCompile Include="Texture.cpp" />

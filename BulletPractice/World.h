@@ -2,6 +2,7 @@
 #include "Texture.h"
 #include "DirectionalEnemy.h"
 #include "SpiralEnemy.h"
+#include "MultipleSpiralEnemy.h"
 #include "Bullet.h"
 #include <D3D11.h>
 #include <xnamath.h>
@@ -21,4 +22,5 @@ private:
 	Texture* m_EnemyTexture;
 	DirectionalEnemy* m_DirectionalEnemy;
 	SpiralEnemy* m_SpiralEnemy;
+	MultipleSpiralEnemy* m_MultipleSpiralEnemy;
 };
