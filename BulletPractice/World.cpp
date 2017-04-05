@@ -1,71 +1,44 @@
 #include "World.h"
+#include <cstdio>
 
 World::World(ID3D11Device* device):
-	m_BulletTexture(new Texture(device, L"./Bullet.dds"))
+	m_EnemyTexture(new Texture(device, L"./Enemy.dds")),
+	m_Enemy(new Enemy(device, m_EnemyTexture, 0.0f, 0.0f, 0.1f)),
+	Bullets(new Bullet*[10000])
 {
-	m_Bullet = new Bullet(device, m_BulletTexture, { 0,0 }, 0.0f, 0.25f, 500.0f, 1.0f);
-	m_Bullet2 = new Bullet(device, m_BulletTexture, { 0,0 }, 90.0f, 0.25f, 500.0f, 1.0f);
-	m_Bullet3 = new Bullet(device, m_BulletTexture, { 0,0 }, 180.0f, 0.25f, 500.0f, 1.0f);
-	m_Bullet4 = new Bullet(device, m_BulletTexture, { 0,0 }, 270.0f, 0.25f, 500.0f, 1.0f);
+	for (int i = 0; i < 10000; i++) {
+		Bullets[i] = nullptr;
+	}
 }
 
 World::~World()
 {
-	if (m_Bullet)
-	{
-		delete m_Bullet;
+	delete m_EnemyTexture;
+	delete m_Enemy;
+	for (int i = 0; i < 10000; i++) {
+		if (Bullets[i]) {
+			delete Bullets[i];
+			Bullets[i] = nullptr;
+		}
 	}
-	if (m_Bullet2)
-	{
-		delete m_Bullet2;
-	}
-	if (m_Bullet3)
-	{
-		delete m_Bullet3;
-	}
-	if (m_Bullet4)
-	{
-		delete m_Bullet4;
-	}
-	delete m_BulletTexture;
+	delete[] Bullets;
 }
 
 void World::update(float deltaTime)
 {
-	if (m_Bullet)
-	{
-		m_Bullet->update(deltaTime);
-	}
-	if (m_Bullet2)
-	{
-		m_Bullet2->update(deltaTime);
-	}
-	if (m_Bullet3)
-	{
-		m_Bullet3->update(deltaTime);
-	}
-	if (m_Bullet4)
-	{
-		m_Bullet4->update(deltaTime);
+	if (m_Enemy) {
+		m_Enemy->update(deltaTime, Bullets);
 	}
 }
 
 void World::draw(ID3D11DeviceContext* deviceContext, CXMMATRIX orthoMatrix)
 {
-	if (m_Bullet)
-	{
-		m_Bullet->draw(deviceContext, orthoMatrix);
+	if (m_Enemy) {
+		m_Enemy->draw(deviceContext, orthoMatrix);
 	}
-	if (m_Bullet2)
-	{
-		m_Bullet2->draw(deviceContext, orthoMatrix);
-	}
-	if (m_Bullet3)
-	{
-		m_Bullet3->draw(deviceContext, orthoMatrix);
-	}
-	if (m_Bullet4)
-	{
-		m_Bullet4->draw(deviceContext, orthoMatrix);
+	for (int i = 0; i < 10000; i++) {
+		if (Bullets[i]) {
+			Bullets[i]->draw(deviceContext, orthoMatrix);
+		}
 	}
 }

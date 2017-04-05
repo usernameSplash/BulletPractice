@@ -1,5 +1,6 @@
 #pragma once
 #include "Texture.h"
+#include "Enemy.h"
 #include "Bullet.h"
 #include <D3D11.h>
 #include <xnamath.h>
@@ -15,10 +16,8 @@ public:
 
 	void update(float deltaTime);
 	void draw(ID3D11DeviceContext* deviceContext, CXMMATRIX orthoMatrix);
+	Bullet** Bullets;
 private:
-	Texture* m_BulletTexture;
-	Bullet* m_Bullet;
-	Bullet* m_Bullet2;
-	Bullet* m_Bullet3;
-	Bullet* m_Bullet4;
+	Texture* m_EnemyTexture;
+	Enemy* m_Enemy;
 };

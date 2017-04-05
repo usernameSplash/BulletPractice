@@ -15,12 +15,12 @@ Bullet::~Bullet()
 
 void Bullet::update(float deltaTime)
 {
-	float x = getPosition().x + m_Speed*sinf(XMConvertToRadians(m_Angle)) * deltaTime;
-	float y = getPosition().y + m_Speed*cosf(XMConvertToRadians(m_Angle)) * deltaTime;
+	float x = getPosition().x + m_Speed*cosf(XMConvertToRadians(m_Angle)) * deltaTime;
+	float y = getPosition().y + m_Speed*sinf(XMConvertToRadians(m_Angle)) * deltaTime;
 
 	m_Angle += m_Angle_rate;
 	m_Speed += m_Speed_rate;
-
+	
 	setPosition(x, y);
 }
 
