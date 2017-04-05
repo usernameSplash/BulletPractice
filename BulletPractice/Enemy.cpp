@@ -12,7 +12,8 @@ Enemy::Enemy(ID3D11Device* device, Texture* texture, float x, float y, float int
 }
 
 Enemy::~Enemy() {
-
+	delete BulletTexture;
+	delete m_Timer;
 }
 
 void Enemy::update(float deltaTime) {
@@ -31,17 +32,13 @@ void Enemy::update(float deltaTime, Bullet** Bullets) {
 			Bullets[m_BulletIndex] = new Bullet(GameState::graphics->getDevice(), BulletTexture, { getPosition().x, getPosition().y }, 90 * i, 0, 500, 0);
 			m_BulletIndex = m_BulletIndex % 10000;
 		}
-		
 		m_Timer->Reset();
 	}
-
-
+	
 	for (int i = 0; i < 10000; i++) {
 		if (Bullets[i]) {
 			Bullets[i]->Bullet::update(deltaTime);
 		}
-	}
-	for (int i = 0; i < 10000; i++) {
 		if (Bullets[i]) {
 			if (Bullets[i]->shouldClose()) {
 				delete Bullets[i];

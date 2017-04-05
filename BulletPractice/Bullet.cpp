@@ -55,8 +55,8 @@ bool Bullet::shouldClose()
 
 	if (x < left) return true;
 	if (right < x) return true;
-	if (x < bottom) return true;
-	if (top < x) return true;
+	if (y < bottom) return true;
+	if (top < y) return true;
 
 	return false;
 }
