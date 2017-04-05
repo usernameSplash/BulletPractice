@@ -3,7 +3,7 @@
 World::World(ID3D11Device* device):
 	m_BulletTexture(new Texture(device, L"./Bullet.dds"))
 {
-	m_Bullet = new Bullet(device, m_BulletTexture, { 0,0 }, { 100,100 });
+	m_Bullet = new Bullet(device, m_BulletTexture, { 0,0 }, 0.0f, 1.0f, 0.0f, 1.0f);
 }
 
 World::~World()

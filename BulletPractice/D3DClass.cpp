@@ -242,7 +242,7 @@ void D3DClass::render()
 	float blendFactor[] = { 0.0f, 0.0f, 0.0f, 0.0f };
 	m_DeviceContext->OMSetBlendState(m_BlendState, blendFactor, 0xffffffff);
 	XMMATRIX ortho = XMLoadFloat4x4(&m_OrthoMatrix); //직교투영 행렬
-	float bgColor[4] = { 1.0f, 1.0f, 1.0f, 0.0f };	 //배경색
+	float bgColor[4] = { 0.0f, 0.0f, 0.0f, 0.0f };	 //배경색
 
 	m_DeviceContext->ClearRenderTargetView(m_RenderTargetView, bgColor);
 	m_DeviceContext->ClearDepthStencilView(m_DepthStencilView, D3D11_CLEAR_DEPTH, 1.0f, 0);

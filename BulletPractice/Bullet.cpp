@@ -1,9 +1,9 @@
 #include "Bullet.h"
 #include "GameConstant.h"
+#include <xnamath.h>
 
-Bullet::Bullet(ID3D11Device* device, Texture* texture, XMFLOAT2 position, XMFLOAT2 speed) :
-	GameObject(device, texture, 32, 32),
-	m_Speed(speed)
+Bullet::Bullet(ID3D11Device* device, Texture* texture, XMFLOAT2 position, float angle, float angle_rate, float speed, float speed_rate) :
+	GameObject(device, texture, 16, 16), m_Speed(speed), m_Speed_rate(speed_rate), m_Angle(angle), m_Angle_rate(angle_rate)
 {
 	setPosition(position.x, position.y);
 }
@@ -15,8 +15,11 @@ Bullet::~Bullet()
 
 void Bullet::update(float deltaTime)
 {
-	float x = getPosition().x + m_Speed.x * deltaTime;
-	float y = getPosition().y + m_Speed.y * deltaTime;
+	float x = getPosition().x + m_Speed*sinf(XMConvertToRadians(m_Angle)) * deltaTime;
+	float y = getPosition().y + m_Speed*cosf(XMConvertToRadians(m_Angle)) * deltaTime;
+
+	m_Angle += m_Angle_rate;
+	m_Speed += m_Speed_rate;
 
 	setPosition(x, y);
 }
@@ -31,13 +34,12 @@ XMFLOAT3 Bullet::getPosition()
 	return GameObject::getPosition();
 }
 
-void Bullet::setSpeed(float x, float y)
+void Bullet::setSpeed(float speed)
 {
-	m_Speed.x = x;
-	m_Speed.y = y;
+	m_Speed = speed;
 }
 
-XMFLOAT2 Bullet::getSpeed()
+float Bullet::getSpeed()
 {
 	return m_Speed;
 }
