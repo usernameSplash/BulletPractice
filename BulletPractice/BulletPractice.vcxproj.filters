@@ -13,5 +13,122 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="소스 파일\Graphic">
+      <UniqueIdentifier>{b2abaf7a-7b2c-4715-9846-f3a08bad91a3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Utils">
+      <UniqueIdentifier>{a388e192-dd1a-49a5-af4d-72d355114e0d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Game">
+      <UniqueIdentifier>{7560379f-ea2f-40a2-86b5-f6ab45da5b08}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Input">
+      <UniqueIdentifier>{e3a4101e-b82e-4020-bcfb-dcac3a1f5e03}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\Graphic">
+      <UniqueIdentifier>{7b6e8073-a19a-4b08-b9a4-dd7749114155}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\Game">
+      <UniqueIdentifier>{5d3cf056-a4bc-41c6-bef6-419cbc429892}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\Utils">
+      <UniqueIdentifier>{7afed025-300d-4992-9b24-f5952fbbe0cc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\Input">
+      <UniqueIdentifier>{0837620e-32a7-4d1d-a988-62dd61b5f123}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shaders">
+      <UniqueIdentifier>{f75b9eea-5300-4107-b217-e2cf38ce622f}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="D3DClass.h">
+      <Filter>헤더 파일\Graphic</Filter>
+    </ClInclude>
+    <ClInclude Include="VertexArray.h">
+      <Filter>헤더 파일\Graphic</Filter>
+    </ClInclude>
+    <ClInclude Include="Texture.h">
+      <Filter>헤더 파일\Graphic</Filter>
+    </ClInclude>
+    <ClInclude Include="Shader.h">
+      <Filter>헤더 파일\Graphic</Filter>
+    </ClInclude>
+    <ClInclude Include="Game.h">
+      <Filter>헤더 파일\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="GameConstant.h">
+      <Filter>헤더 파일\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="GameObject.h">
+      <Filter>헤더 파일\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="GameState.h">
+      <Filter>헤더 파일\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="GameTimer.h">
+      <Filter>헤더 파일\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="GameWindow.h">
+      <Filter>헤더 파일\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Input.h">
+      <Filter>헤더 파일\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="World.h">
+      <Filter>헤더 파일\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Bullet.h">
+      <Filter>헤더 파일\Game</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="D3DClass.cpp">
+      <Filter>소스 파일\Graphic</Filter>
+    </ClCompile>
+    <ClCompile Include="VertexArray.cpp">
+      <Filter>소스 파일\Graphic</Filter>
+    </ClCompile>
+    <ClCompile Include="Texture.cpp">
+      <Filter>소스 파일\Graphic</Filter>
+    </ClCompile>
+    <ClCompile Include="Shader.cpp">
+      <Filter>소스 파일\Graphic</Filter>
+    </ClCompile>
+    <ClCompile Include="GameWindow.cpp">
+      <Filter>소스 파일\Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="GameTimer.cpp">
+      <Filter>소스 파일\Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="Game.cpp">
+      <Filter>소스 파일\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="GameObject.cpp">
+      <Filter>소스 파일\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="GameState.cpp">
+      <Filter>소스 파일\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Input.cpp">
+      <Filter>소스 파일\Input</Filter>
+    </ClCompile>
+    <ClCompile Include="World.cpp">
+      <Filter>소스 파일\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Bullet.cpp">
+      <Filter>소스 파일\Game</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="VertexShader.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="PixelShader.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
   </ItemGroup>
 </Project>
