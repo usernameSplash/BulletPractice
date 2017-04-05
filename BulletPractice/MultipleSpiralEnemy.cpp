@@ -28,8 +28,8 @@ void MultipleSpiralEnemy::update(float deltaTime, Bullet** Bullets) {
 		while (Bullets[m_BulletIndex]) {
 			m_BulletIndex++;
 		}
-		for (int i = 0; i < 4; i++) {
-			Bullets[m_BulletIndex + i] = new Bullet(GameState::graphics->getDevice(), m_BulletTexture, { getPosition().x, getPosition().y }, m_Angle+(float)(m_Angle*i/4), 0, m_Speed, 0);	
+		for (int i = 0; i < m_Count; i++) {
+			Bullets[m_BulletIndex + i] = new Bullet(GameState::graphics->getDevice(), m_BulletTexture, { getPosition().x, getPosition().y }, m_Angle+(float)(i*360/m_Count), 1.5f, m_Speed, 0.0f);	
 		}
 		m_Angle += m_Angle_Rate;
 		m_BulletIndex = m_BulletIndex % 10000;
