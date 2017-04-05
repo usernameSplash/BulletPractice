@@ -1,10 +1,9 @@
 #pragma once
 #include "Texture.h"
-#include "Enemy.h"
+#include "DirectionalEnemy.h"
 #include "Bullet.h"
 #include <D3D11.h>
 #include <xnamath.h>
-
 
 class World
 {
@@ -19,5 +18,5 @@ public:
 	Bullet** Bullets;
 private:
 	Texture* m_EnemyTexture;
-	Enemy* m_Enemy;
+	DirectionalEnemy* m_DirectionalEnemy;
 };

@@ -8,7 +8,7 @@ class Enemy : public GameObject {
 public:
 	Enemy() = delete;
 	Enemy(Enemy&) = delete;
-	Enemy(ID3D11Device* device, Texture* texture, float x, float y, float interval);
+	Enemy(ID3D11Device* device, Texture* texture, float x, float y, float angle, float angle_Rate, float speed, float speed_Rate, float interval);
 	virtual ~Enemy() override;
 
 	virtual void update(float deltaTime) override;
@@ -16,9 +16,5 @@ public:
 
 	virtual void setPosition(float x, float y);
 	virtual XMFLOAT3 getPosition() override;
-private:
-	Texture* BulletTexture;
-	int m_BulletIndex;
-	GameTimer* m_Timer;
-	float m_Interval;
+
 };
