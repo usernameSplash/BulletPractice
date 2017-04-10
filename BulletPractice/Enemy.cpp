@@ -18,10 +18,6 @@ void Enemy::update(float deltaTime) {
 
 }
 
-void Enemy::update(float deltaTime, Bullet** Bullets) {
-
-}
-
 void Enemy::setPosition(float x, float y)
 {
 	GameObject::setPosition(x, y, 1.0f);

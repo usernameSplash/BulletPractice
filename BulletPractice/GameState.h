@@ -1,6 +1,6 @@
 #pragma once
 #include "D3DClass.h"
-#include "World.h"
+#include "World1.h"
 #include "Input.h"
 #include "GameWindow.h"
 #include "GameTimer.h"

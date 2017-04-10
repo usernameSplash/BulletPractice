@@ -1,8 +1,5 @@
 #pragma once
 #include "Texture.h"
-#include "DirectionalEnemy.h"
-#include "SpiralEnemy.h"
-#include "MultipleSpiralEnemy.h"
 #include "Bullet.h"
 #include <D3D11.h>
 #include <xnamath.h>
@@ -13,14 +10,10 @@ public:
 	World() = delete;
 	World(World&) = delete;
 	World(ID3D11Device* device);
-	~World();
+	virtual	~World();
 
-	void update(float deltaTime);
-	void draw(ID3D11DeviceContext* deviceContext, CXMMATRIX orthoMatrix);
-	Bullet** Bullets;
+	void virtual update(float deltaTime) = 0;
+	void virtual draw(ID3D11DeviceContext* deviceContext, CXMMATRIX orthoMatrix) = 0;
+	
 private:
-	Texture* m_EnemyTexture;
-	DirectionalEnemy* m_DirectionalEnemy;
-	SpiralEnemy* m_SpiralEnemy;
-	MultipleSpiralEnemy* m_MultipleSpiralEnemy;
 };
