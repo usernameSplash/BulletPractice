@@ -5,7 +5,7 @@ class MultipleSpiralEnemy : public Enemy {
 public :
 	MultipleSpiralEnemy() = delete;
 	MultipleSpiralEnemy(MultipleSpiralEnemy&) = delete;
-	MultipleSpiralEnemy(ID3D11Device* device, Texture* texture, float x, float y, float angle, float angle_Rate, float speed, float speed_Rate, float interval, int count);
+	MultipleSpiralEnemy(ID3D11Device* device, Texture* texture, float x, float y, float angle, float angle_Rate, float range, float direction_Rate, float speed, float speed_Rate, float interval, int count);
 	virtual ~MultipleSpiralEnemy() override;
 
 	virtual void update(float deltaTime, Bullet** Bullets) override;
@@ -17,6 +17,8 @@ public:
 
 	float m_Angle;
 	float m_Angle_Rate;
+	float m_Range;
+	float m_Direction_Rate;
 	float m_Speed;
 	float m_Speed_Rate;
 	float m_Interval;

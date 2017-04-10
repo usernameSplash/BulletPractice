@@ -58,7 +58,7 @@ D3DClass::D3DClass(HWND hWnd) :
 	sd.Flags = 0;
 	sd.OutputWindow = hWnd;
 	sd.SwapEffect = DXGI_SWAP_EFFECT_DISCARD;
-	sd.Windowed = true;
+	sd.Windowed = false;
 	sd.SampleDesc.Count = 4;
 	sd.SampleDesc.Quality = m_4xMsaaQuality - 1;
 

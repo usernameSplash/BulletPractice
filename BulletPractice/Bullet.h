@@ -23,4 +23,5 @@ private:
 	float m_Speed_rate;
 	float m_Angle;
 	float m_Angle_rate;
+	float m_Direction_rate;
 };

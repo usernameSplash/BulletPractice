@@ -5,7 +5,7 @@ World::World(ID3D11Device* device) :
 	m_EnemyTexture(new Texture(device, L"./res/Enemy.dds")),
 //	m_DirectionalEnemy(new DirectionalEnemy(device, m_EnemyTexture, -960.0f + 64.0f, 540.0f - 64.0f, 335.0f, 0.0f, 500.0f, 0.0f, 0.1f)),
 //	m_SpiralEnemy(new SpiralEnemy(device, m_EnemyTexture, 0.0f, 0.0f, 0.0f, 10.0f, 500.0f, 0.0f, 0.1f)),
-	m_MultipleSpiralEnemy(new MultipleSpiralEnemy(device, m_EnemyTexture, 0.0f, 0.0f, 0.0f, 10.0f, 500.0f, 0.0f, 0.1f, 4)),
+	m_MultipleSpiralEnemy(new MultipleSpiralEnemy(device, m_EnemyTexture, 0.0f, 540.0f, 270.0f, 0.0f, 30.0f, 0.05f, 100.0f, 3.0f, 0.1f, 8)),
 	Bullets(new Bullet*[10000])
 {
 	for (int i = 0; i < 10000; i++) {

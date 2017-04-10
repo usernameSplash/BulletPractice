@@ -4,7 +4,7 @@
 #include "World.h"
 #include <xnamath.h>
 
-Enemy::Enemy(ID3D11Device* device, Texture* texture, float x, float y, float angle, float angle_Rate, float speed, float speed_Rate, float interval)
+Enemy::Enemy(ID3D11Device* device, Texture* texture, float x, float y)
 	: GameObject(device, texture, 32, 32)
 {
 	setPosition(x, y);
