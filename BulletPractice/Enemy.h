@@ -12,7 +12,9 @@ public:
 	virtual ~Enemy() override;
 
 	virtual void update(float deltaTime) override;
+	virtual void update(float deltaTime, Bullet** Bullets);
 
 	virtual void setPosition(float x, float y);
 	virtual XMFLOAT3 getPosition() override;
+
 };

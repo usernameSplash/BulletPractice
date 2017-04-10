@@ -46,12 +46,6 @@
     <Filter Include="헤더 파일\Game\Enemy">
       <UniqueIdentifier>{9bd3bdb7-0466-45e7-bed0-47c4e14f473f}</UniqueIdentifier>
     </Filter>
-    <Filter Include="소스 파일\Game\World">
-      <UniqueIdentifier>{c819c1bc-c2d2-4d59-9a2a-d589392eec8e}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="헤더 파일\Game\World">
-      <UniqueIdentifier>{53abe3e9-166c-4dc2-89da-4007dc656897}</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="D3DClass.h">
@@ -87,19 +81,22 @@
     <ClInclude Include="Input.h">
       <Filter>헤더 파일\Input</Filter>
     </ClInclude>
+    <ClInclude Include="World.h">
+      <Filter>헤더 파일\Game</Filter>
+    </ClInclude>
     <ClInclude Include="Bullet.h">
       <Filter>헤더 파일\Game</Filter>
     </ClInclude>
     <ClInclude Include="Enemy.h">
       <Filter>헤더 파일\Game\Enemy</Filter>
     </ClInclude>
-    <ClInclude Include="World.h">
-      <Filter>헤더 파일\Game\World</Filter>
-    </ClInclude>
-    <ClInclude Include="World1.h">
-      <Filter>헤더 파일\Game\World</Filter>
-    </ClInclude>
     <ClInclude Include="DirectionalEnemy.h">
+      <Filter>헤더 파일\Game\Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="SpiralEnemy.h">
+      <Filter>헤더 파일\Game\Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="MultipleSpiralEnemy.h">
       <Filter>헤더 파일\Game\Enemy</Filter>
     </ClInclude>
   </ItemGroup>
@@ -137,19 +134,22 @@
     <ClCompile Include="Input.cpp">
       <Filter>소스 파일\Input</Filter>
     </ClCompile>
+    <ClCompile Include="World.cpp">
+      <Filter>소스 파일\Game</Filter>
+    </ClCompile>
     <ClCompile Include="Bullet.cpp">
       <Filter>소스 파일\Game</Filter>
     </ClCompile>
     <ClCompile Include="Enemy.cpp">
       <Filter>소스 파일\Game\Enemy</Filter>
     </ClCompile>
-    <ClCompile Include="World.cpp">
-      <Filter>소스 파일\Game\World</Filter>
-    </ClCompile>
-    <ClCompile Include="World1.cpp">
-      <Filter>소스 파일\Game\World</Filter>
-    </ClCompile>
     <ClCompile Include="DirectionalEnemy.cpp">
+      <Filter>소스 파일\Game\Enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="SpiralEnemy.cpp">
+      <Filter>소스 파일\Game\Enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="MultipleSpiralEnemy.cpp">
       <Filter>소스 파일\Game\Enemy</Filter>
     </ClCompile>
   </ItemGroup>
@@ -160,13 +160,5 @@
     <FxCompile Include="PixelShader.hlsl">
       <Filter>Shaders</Filter>
     </FxCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <Image Include="res\Bullet.dds">
-      <Filter>리소스 파일</Filter>
-    </Image>
-    <Image Include="res\Enemy.dds">
-      <Filter>리소스 파일</Filter>
-    </Image>
   </ItemGroup>
 </Project>

@@ -12,8 +12,7 @@ void GameState::Initialize(HINSTANCE instanceHandle, int nShowCmd)
 	graphics = new D3DClass(window->getWindowHandle());
 	frameTimer = new GameTimer();
 	gameInput = new Input(instanceHandle, window->getWindowHandle());
-	world = new World1(graphics->getDevice(), new DirectionalEnemy(graphics->getDevice(), new Texture(graphics->getDevice(),L"./res/Enemy.dds"), 
-														0.0f, 0.0f, 0.0f, 0.0f, 500.0f, 0.0f, 1.0f));
+	world = new World(graphics->getDevice());
 
 	//타이머 초기화
 	GameState::frameTimer->Reset();
